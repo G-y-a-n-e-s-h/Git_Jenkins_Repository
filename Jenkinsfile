@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-       stage('Build') {
+       stage('Checkout') {
             steps {
-                sh 'python3 pyt.py'
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'd91f3581-a7cd-4ff7-98e5-670d06493ad5', url: 'https://github.com/G-y-a-n-e-s-h/Git_Jenkins_Repository.git']])
             }
         }
     }
