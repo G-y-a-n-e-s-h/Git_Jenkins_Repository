@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Test') {
+       stage('Build') {
             steps {
-                sh 'python pyt.py'
+                sh 'python3 pyt.py'
             }
         }
     }
